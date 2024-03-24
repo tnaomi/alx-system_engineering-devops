@@ -4,6 +4,6 @@
 for FILE in *; do
     if [ -f "$FILE" ]
     then
-	ls | sed 's/.*-/''/g' | sort
+	find ./* -user "$USER" | sed 's/.*-/''/g'
     fi
 done
