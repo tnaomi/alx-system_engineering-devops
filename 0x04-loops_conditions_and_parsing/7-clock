@@ -2,14 +2,15 @@
 # Displays Clock using nested WHILE loops
 
 hr=0
-min=1
+
 while [[ hr -lt 13 ]]
 do
- echo "Hour: $hr"
- while [[ min -lt 60 ]]
- do
-  echo "$min"
-  (( min++ ))
- done
- (( hr++ ))
+	echo "Hour: $hr"
+	min=1
+	while [[ min -lt 60 ]]
+	do
+		echo "$min"
+		((min++))
+	done
+	((hr++))
 done
