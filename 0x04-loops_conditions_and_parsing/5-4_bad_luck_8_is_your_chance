@@ -2,15 +2,15 @@
 # Displays "bad luck" at 4, "good luck" at 8, "Best School" elsewhere
 
 i=0
-while [[ i -lt 10 ]]
+while [[ i -lt 8 ]]
 do
  echo "Best School"
  i=$(( i + 1 ))
- if [ $i == 4 ]
+ if [ $i == 3 ]
  then
   echo "bad luck"
 
- elif [ $i == 8 ]
+ elif [ $i == 6 ]
  then
   echo "good luck"
 
