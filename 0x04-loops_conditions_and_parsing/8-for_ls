@@ -2,5 +2,5 @@
 # ls documents but with no numerical prefixes
 
 for FILE in *; do
-	echo $FILE | sed 's/.*-/''/g' | uniq
+	echo "$FILE" | sed 's/.*-/''/g' | uniq
 done
