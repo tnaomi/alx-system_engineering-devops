@@ -5,4 +5,5 @@
 for i in {10..1}
 do
     echo "Best School"
+    (( i++ ))
 done

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# ls documents but with no numerical prefixes
+
+for FILE in *; do
+    if [ -f "$FILE" ]
+    then
+	ls | sed 's/.*-/''/g'
+    fi
+done
