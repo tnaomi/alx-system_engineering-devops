@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Fizz for multiple of 3, Buzz of 5, FizzBuzz for both
+
+num=1
+
+while [[ num -le 100 ]]
+do
+	mult3=$(($num % 3))
+	mult5=$(($num % 5))
+
+	if [[ $mult3 == 0 && ! $mult5 == 0 ]]
+	then
+		echo "Fizz"
+
+	elif [[ $mult5 == 0 && ! $mult3 == 0 ]]
+	then
+		echo "Buzz"
+	elif [[ $mult5 == 0 && $mult3 == 0 ]]
+	then
+		echo "FizzBuzz"
+	else
+		echo "$num"
+	fi
+	((num++))
+done
