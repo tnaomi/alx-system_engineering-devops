@@ -5,8 +5,8 @@ num=1
 
 while [[ num -le 100 ]]
 do
-	mult3=$(($num % 3))
-	mult5=$(($num % 5))
+	mult3=$((num % 3))
+	mult5=$((num % 5))
 
 	if [[ $mult3 == 0 && ! $mult5 == 0 ]]
 	then
