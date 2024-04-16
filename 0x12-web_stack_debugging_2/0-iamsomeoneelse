@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Display root or current user
 
 if [[ $(id -u) == 0 || -z "$1" ]]
 then

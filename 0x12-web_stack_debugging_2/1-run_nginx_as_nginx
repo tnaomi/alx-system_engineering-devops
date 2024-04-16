@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Run nginx as nginx user; change port to 8080
+
+chmod 777 /etc/nginx/nginx.conf
+sudo pkill -f nginx & wait $!
+sed -i 's/80/8080/g' /etc/nginx/sites-enabled/default
+sudo -u nginx /etc/init.d/nginx start
