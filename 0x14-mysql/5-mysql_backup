@@ -1,4 +1,4 @@
-#!/usr/bin/env 
+#!/usr/bin/env bash
 # Dump database for backup in a tar file
 
 sudo mysqldump -u root -p "$1" -A | sudo tee backup.sql
