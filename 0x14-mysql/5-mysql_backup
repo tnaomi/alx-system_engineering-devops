@@ -1,0 +1,5 @@
+#!/usr/bin/env 
+# Dump database for backup in a tar file
+
+sudo mysqldump -u root -p "$1" -A | sudo tee backup.sql
+tar -cvzf "$(date +"%d-%m-%Y").tar.gz" backup.sql
