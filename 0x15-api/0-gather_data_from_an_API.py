@@ -13,7 +13,8 @@ if __name__ == "__main__":
     employee = '{}users/{}'.format(url, user_id)
     response = RQ.get(employee)
     json_data = response.json()
-    print("Employee {} is done with tasks".format(json_data.get('name')), end="")
+    print("Employee {} is done with tasks".format(json_data.get('name')),
+          end="")
 
     todos = '{}todos?userId={}'.format(url, user_id)
     response = RQ.get(todos)
