@@ -11,7 +11,7 @@ if __name__ == "__main__":
     all_users = users.json()
     todos = RQ.get('https://jsonplaceholder.typicode.com/todos')
     todos = todos.json()
-    
+
     all_todos = {}
 
     for user in all_users:
