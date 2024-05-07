@@ -34,4 +34,19 @@ __File__
 
 ``0-subs.py``, test w ``0-main.py``
 
-### 1. 
+### 1. Top Ten
+
+Write a function that queries the Reddit API and prints the titles of the first 10 hot posts listed for a given subreddit.
+
+Requirements:
+
+- Prototype: ``def top_ten(subreddit)``
+- If not a valid subreddit, print ``None``.
+- NOTE: Invalid subreddits may return a redirect to search results. Ensure that you are not following redirects.
+
+__File__
+
+``1-top_ten.py``, test w ``1-main.py``
+
+### 2. Recurse it!
+
