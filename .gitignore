@@ -1,3 +1,5 @@
 commit.sh
 *~
 *.swp
+.vscode/settings.json
+0x16-api_advanced/__pycache__/0-subs.cpython-312.pyc
