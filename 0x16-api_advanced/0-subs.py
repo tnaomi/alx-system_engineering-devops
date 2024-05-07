@@ -2,7 +2,6 @@
 
 """ Query the Reddit API for subreddit subscribers"""
 
-import requests as RQ
 
 def number_of_subscribers(subreddit):
     """ Query a Reddit subreddit for the total number of subscribers.
@@ -10,6 +9,8 @@ def number_of_subscribers(subreddit):
     @Param: subreddit
     Returns: 0 if not valid subreddit
     """
+    import requests as RQ
+
     SUB_URL = 'http://reddit.com/r/{}/about.json'.format(str(subreddit))
 
     agent = {'user-agent': 'my-api/0.0.1'}
@@ -22,9 +23,9 @@ def number_of_subscribers(subreddit):
     try:
         json_resp = resp.json()
 
-    except:
+    except ValueError:
         return 0
-    
+
     data = json_resp.get('data')
 
     if data:
