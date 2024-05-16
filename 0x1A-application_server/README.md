@@ -33,6 +33,10 @@ Now that you have your development environment set up, let’s get your producti
 - You will serve the same content from the same route as in the previous task. You can verify that it’s working by binding a Gunicorn instance to `localhost` listening on port `5000` with your application object as the entry point.
 - In order to check your code, the checker will bind a `Gunicorn` instance to port `6000`, so make sure nothing is listening on that port.
 
+```bash
+gunicorn --bind 0.0.0.0:5000 web_flask.0-hello_route:app
+```
+
 ### 2. Serve a page with Nginx
 
 Building on your work in the previous tasks, configure Nginx to serve your page from the route /airbnb-onepage/
