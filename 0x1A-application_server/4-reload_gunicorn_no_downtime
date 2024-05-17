@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+# Restart a process. No downtime
+
+pkill -HUP gunicorn
