@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 # Restart a process. No downtime
 
-pkill -HUP gunicorn
+#pkill -HUP gunicorn - Failed on 'start gracefully'
+
+sudo kill -S HUP "$(pgrep gunicorn)"
