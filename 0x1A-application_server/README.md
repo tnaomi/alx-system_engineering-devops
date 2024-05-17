@@ -137,3 +137,7 @@ Workers are the actual ones processing the query by generation dynamic content b
 To update an application without downtime, the master will proceed with a progressive rollout of the update. It will gracefully shut down some workers ( meaning that it will tell workers to finish processing the request they are working on, but will not send them new requests, once the worker is done, it’s will be shutdown) and start new ones with the new application code or configuration, then move on to the other old workers until it has renewed the whole pool.
 
 Write a simple Bash script to reload Gunicorn in a graceful way.
+
+__File__
+
+`4-reload_gunicorn_no_downtime`
